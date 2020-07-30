@@ -166,6 +166,10 @@ module.exports = {
           return DateTime.fromRFC2822(a, {
             zone: sz
           });
+        case "timestamp":
+          return DateTime.fromSeconds(a, {
+            zone: sz
+          });
         default:
           return DateTime.fromFormat(a, sf, {
             zone: sz
